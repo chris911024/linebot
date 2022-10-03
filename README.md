@@ -4,16 +4,17 @@
 使用者透過LINE發送訊息時，LINE Platform將會進行接收，並且傳遞至我們所開發的LINE Bot執行邏輯運算後，透過LINE所提供的Messaging API回應訊息給LINE Platform，最後再將訊息傳遞給使用者。
 
 其中Messaging API(Application Programming Interface)，就是LINE官方定義的回應訊息標準介面，包含Text(文字)、Sticker(貼圖)、Video(影片)、Audio(聲音)及Template(樣板)訊息等，完整的說明可以參考LINE的官方文件。(https://developers.line.biz/en/docs/messaging-api/overview/#%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%A9%9F)
-# 架構
+# 執行架構
 我就先以最基本的使用者發送什麼訊息，LINE Bot就回應什麼訊。架構如下
 ![image](https://user-images.githubusercontent.com/67829896/192131092-8e815f74-147f-4492-9993-652bb16c9204.png)
+# 操作步驟
 。建立Provider
 。建立Messaging API channel
 。設定LINE Bot憑證
 。開發LINE Bot應用程式
 。安裝Ngrok
 。設定LINE Webhook URL
-
+# 建立Provider
 進入https://developers.line.biz/zh-hant/
 ![image](https://user-images.githubusercontent.com/67829896/192131133-fa87a875-5c99-4c8a-8325-2d1060bf1c4e.png)
 
@@ -24,7 +25,7 @@
 ![image](https://user-images.githubusercontent.com/67829896/192131181-4ff5aa88-4b0d-47df-85ec-30bcf0733c1c.png)
 
 
-建立Messaging API channel
+# 建立Messaging API channel
 
 ![image](https://user-images.githubusercontent.com/67829896/192131202-20ba9ce2-d870-4914-a1be-c4d5a35b2c7e.png)
 
@@ -39,7 +40,7 @@ Channel access token(頻道憑證)：
 ![image](https://user-images.githubusercontent.com/67829896/192131267-f42d3bbb-da09-4aa1-884d-849f74b608c5.png)
 
 
-設定LINE Bot憑證
+# 設定LINE Bot憑證
 
 先建立虛擬環境！這點很重要！執行任何程式都要先建置虛擬環境
 pip install virtualenv
@@ -48,13 +49,13 @@ python -m venv venv
 venv\Scripts\activate
 pip freeze > requirements.txt
 pip install -r requirements.txt
-接著django建置
-django-admin startproject mylinebot .  #建立Django專案 
-python manage.py startapp foodlinebot  #建立Django應用程式 
-python manage.py migrate  #執行資料遷移(Migration)
+# 接著django建置
+django-admin startproject mylinebot .  建立Django專案 
+python manage.py startapp foodlinebot  建立Django應用程式 
+python manage.py migrate  執行資料遷移(Migration)
 
 
-專案架構如下
+# 專案架構
 
 
 <img width="195" alt="image" src="https://user-images.githubusercontent.com/67829896/192131353-92c8e423-a71b-44d8-b43a-1fdd128790fa.png">
@@ -92,7 +93,7 @@ Django應用程式(APP)下建立一個urls.py檔案
 
 －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
-安裝Ngrok（依據作業系統進行下載）
+# 安裝Ngrok（依據作業系統進行下載）
 需要輸入以下的指令
  ngrok authtoken <YOUR TOKEN>
 
@@ -106,12 +107,12 @@ Django應用程式(APP)下建立一個urls.py檔案
 <img width="627" alt="image" src="https://user-images.githubusercontent.com/67829896/192131729-bc9ef997-be64-4695-a565-0cd6b3ad6b0b.png">
 
  
- 執行LINE Bot
+# 執行LINE Bot
 python manage.py runserver
 
  －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
- 設定LINE Webhook URL
+ # 設定LINE Webhook URL
 
  Webhook
  
