@@ -1,10 +1,10 @@
-# 鸚鵡機器人
+# 詐欺ㄟ之食物機器人
 在進行實作前，先來看一下LINE Bot主要的執行架構
 ![image](https://user-images.githubusercontent.com/67829896/192131030-d5436b59-df1f-469e-a4a5-7093a8af48a0.png)
 使用者透過LINE發送訊息時，LINE Platform將會進行接收，並且傳遞至我們所開發的LINE Bot執行邏輯運算後，透過LINE所提供的Messaging API回應訊息給LINE Platform，最後再將訊息傳遞給使用者。
 
 其中Messaging API(Application Programming Interface)，就是LINE官方定義的回應訊息標準介面，包含Text(文字)、Sticker(貼圖)、Video(影片)、Audio(聲音)及Template(樣板)訊息等，完整的說明可以參考LINE的官方文件。(https://developers.line.biz/en/docs/messaging-api/overview/#%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%A9%9F)
-
+# 架構
 我就先以最基本的使用者發送什麼訊息，LINE Bot就回應什麼訊。架構如下
 ![image](https://user-images.githubusercontent.com/67829896/192131092-8e815f74-147f-4492-9993-652bb16c9204.png)
 。建立Provider
