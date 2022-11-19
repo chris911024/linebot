@@ -122,7 +122,7 @@ python manage.py runserver
  －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
  
- ![image](https://user-images.githubusercontent.com/67829896/192131785-324991ca-86d1-48b3-9593-547e9f871536.png)
+
 
 
 
