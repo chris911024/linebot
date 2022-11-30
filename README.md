@@ -119,7 +119,7 @@ python manage.py runserver
  ![image](https://user-images.githubusercontent.com/67829896/192131765-2670c439-12bf-4cb0-83b3-280660644875.png)
 
  
- －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+ －－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
  
 
